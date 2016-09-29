@@ -6,9 +6,20 @@ package ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web;
 public class RestAPIServiceImp   {
 
 
-    public RestAPIServiceImp()
-    {
 
+    private RestAPICalls restcalls;
+
+    public RestAPIServiceImp(RestAPICalls restcalls)
+    {
+        this.restcalls = restcalls;
+    }
+
+
+
+
+    public void LoginCall()
+    {
+        //restcalls .getStuff!!!
     }
 
 
