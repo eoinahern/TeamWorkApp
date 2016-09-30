@@ -3,6 +3,7 @@ package ie.ahern.eoin.demo.teamworkapp.teamworkapp;
 import android.app.Application;
 
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.presentation.DI.components.AppComponent;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.presentation.DI.components.DaggerAppComponent;
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.presentation.DI.modules.ApplicationModule;
 
 /**
@@ -17,8 +18,11 @@ public class TeamWorkApp extends Application {
     public void onCreate()
     {
         super.onCreate();
-        appcomp = DaggerAppComponent.builder()
-                .applicationModule(new ApplicationModule(this)).build();
+        appcomp = DaggerAppComponent.builder().build();
+                //.applicationModule(new ApplicationModule(this)).build(); deprecated??
+
+
+
 
     }
 

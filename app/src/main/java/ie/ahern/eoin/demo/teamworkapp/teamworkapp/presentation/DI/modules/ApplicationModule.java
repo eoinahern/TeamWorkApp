@@ -11,7 +11,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import ie.ahern.eoin.demo.teamworkapp.teamworkapp.TeamWorkApp;
+
 
 /**
  * Created by eoin_pc on 30/09/2016.
@@ -36,7 +36,7 @@ public class ApplicationModule {
 
     @Singleton
     @Provides
-    public SharedPreferences getPrefs(Application app)
+    public SharedPreferences getPrefs()
     {
         return PreferenceManager.getDefaultSharedPreferences(app);
     }
