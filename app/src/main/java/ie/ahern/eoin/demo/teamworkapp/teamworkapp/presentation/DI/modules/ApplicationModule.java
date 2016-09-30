@@ -21,31 +21,30 @@ public class ApplicationModule {
 
     private Application app;
 
-    public ApplicationModule(TeamWorkApp twapp)
+    public ApplicationModule(Application twapp)
     {
         app = twapp;
     }
 
-
-    @Provides
     @Singleton
+    @Provides
     public Context getCont()
     {
-        return app.getApplicationContext();
+        return app;
     }
 
 
-    @Provides
     @Singleton
-    public SharedPreferences getPrefs(Context cont)
+    @Provides
+    public SharedPreferences getPrefs(Application app)
     {
-        return PreferenceManager.getDefaultSharedPreferences(cont);
+        return PreferenceManager.getDefaultSharedPreferences(app);
     }
 
 
 
-    @Provides
     @Singleton
+    @Provides
     public Gson getGson()
     {
         return new Gson();
