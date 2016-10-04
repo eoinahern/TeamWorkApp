@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 
 import com.google.gson.Gson;
 
+import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -49,4 +50,21 @@ public class ApplicationModule {
     {
         return new Gson();
     }
+
+
+    @Singleton
+    @Provides
+    @Named("key")
+    public String apiKey()
+    {
+       return  "blink96elbow";
+    }
+
+    @Provides
+    @Singleton
+    public String getEndpoint()
+    {
+        return "https://independent13.teamwork.com/";
+    }
+
 }
