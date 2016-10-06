@@ -1,5 +1,6 @@
 package ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.interactor;
 
+import rx.Observable;
 import rx.Subscription;
 
 /**
@@ -17,13 +18,13 @@ public abstract class UseCase {
 
 
 
-
-
     public void unsubscribe()
     {
         if(subscription != null && !subscription.isUnsubscribed())
             subscription.unsubscribe();
     }
+
+    public abstract Observable BuildUsecaseObservabel();
 
 
 }

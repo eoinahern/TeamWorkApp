@@ -12,6 +12,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web.RestAPICalls;
 
 
 /**
@@ -49,22 +50,6 @@ public class ApplicationModule {
     public Gson getGson()
     {
         return new Gson();
-    }
-
-
-    @Singleton
-    @Provides
-    @Named("key")
-    public String apiKey()
-    {
-       return  "blink96elbow";
-    }
-
-    @Provides
-    @Singleton
-    public String getEndpoint()
-    {
-        return "https://independent13.teamwork.com/";
     }
 
 }
