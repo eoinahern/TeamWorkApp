@@ -12,12 +12,6 @@ public abstract class UseCase {
 
 
 
-
-
-
-
-
-
     public void unsubscribe()
     {
         if(subscription != null && !subscription.isUnsubscribed())

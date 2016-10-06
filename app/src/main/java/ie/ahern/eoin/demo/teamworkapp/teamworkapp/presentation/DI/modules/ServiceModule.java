@@ -33,10 +33,10 @@ public class ServiceModule {
     }
 
 
-    @Provides
+    /*@Provides
     @Singleton
     public RestAPICalls getWebService()
     {
 
-    }
+    }*/
 }
