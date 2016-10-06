@@ -14,6 +14,14 @@ import rx.Observable;
 public class DataRepositoryImp  implements DataRepository{
 
 
+    //contains factory class.
+    //factory determines what DataStore is Used
+
+
+    public DataRepositoryImp()
+    {
+
+    }
 
     @Override
     public Observable<List<Project>> getProjects() {
