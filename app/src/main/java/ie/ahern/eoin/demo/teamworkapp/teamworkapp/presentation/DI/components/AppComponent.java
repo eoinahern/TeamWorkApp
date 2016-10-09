@@ -1,5 +1,6 @@
 package ie.ahern.eoin.demo.teamworkapp.teamworkapp.presentation.DI.components;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
@@ -20,6 +21,7 @@ public interface AppComponent {
 
     void inject(BaseActivity baseactivity);
 
-    //Gson getgson();
-    //SharedPreferences prefs();
+    Gson getgson();
+    SharedPreferences prefs();
+    Context cont();
 }

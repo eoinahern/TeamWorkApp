@@ -2,8 +2,11 @@ package ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.repository.datasources;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.entity.Project;
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.entity.Task;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web.RestAPICalls;
 import rx.Observable;
 
 /**
@@ -12,7 +15,12 @@ import rx.Observable;
 
 public class WebDataStore implements DataStore {
 
-    public WebDataStore()
+
+    private RestAPICalls restcalls;
+
+
+    @Inject
+    public WebDataStore(RestAPICalls restcalls)
     {
 
     }

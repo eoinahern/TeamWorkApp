@@ -1,5 +1,7 @@
 package ie.ahern.eoin.demo.teamworkapp.teamworkapp.presentation.DI.modules;
 
+import android.content.Context;
+
 import javax.inject.Named;
 import javax.inject.Singleton;
 
@@ -26,17 +28,17 @@ public class ServiceModule {
 
     @Provides
     @Singleton
-    @Named("")
+    @Named("url")
     public String getEndpoint()
     {
         return "https://independent13.teamwork.com/";
     }
 
 
-    /*@Provides
+    @Provides
     @Singleton
-    public RestAPICalls getWebService()
+    public RestAPICalls getWebService(@Named("key") String key,@Named("url") String url, Context cont)
     {
 
-    }*/
+    }
 }

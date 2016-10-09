@@ -15,12 +15,7 @@ import rx.Observable;
 
 public class DataRepositoryImp  implements DataRepository {
 
-
-    //contains factory class.
-    //factory determines what DataStore is Used
-
     private DataStoreFactory factory;
-
 
     @Inject
     public DataRepositoryImp(DataStoreFactory factory)

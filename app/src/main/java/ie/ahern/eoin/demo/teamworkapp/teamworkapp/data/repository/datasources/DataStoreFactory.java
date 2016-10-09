@@ -4,6 +4,8 @@ import android.content.Context;
 
 import javax.inject.Inject;
 
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web.RestAPICalls;
+
 /**
  * Created by eoin_pc on 06/10/2016.
  * select the repo to use depending on what is required
@@ -17,11 +19,10 @@ public class DataStoreFactory {
 
 
     @Inject
-    public DataStoreFactory(Context cont)
+    public DataStoreFactory( RestAPICalls resapicalls)
     {
-        //setup data. need to send in context
 
-        webstore = new WebDataStore();
+        webstore = new WebDataStore(resapicalls);
 
 
     }
