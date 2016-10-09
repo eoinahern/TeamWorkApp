@@ -11,7 +11,6 @@ import rx.Observable;
  */
 public interface DataRepository {
 
-
     Observable<List<Project>> getProjects();
     Observable<List<Task>> getTask();
 
