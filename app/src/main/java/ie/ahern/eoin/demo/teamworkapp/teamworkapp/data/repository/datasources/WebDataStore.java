@@ -22,17 +22,17 @@ public class WebDataStore implements DataStore {
     @Inject
     public WebDataStore(RestAPICalls restcalls)
     {
-
+        this.restcalls = restcalls;
     }
 
 
     @Override
     public Observable<List<Project>> getProjects() {
-        return null;
+        return Observable.defer( () -> restcalls.getProjects("key")) ;
     }
 
     @Override
     public Observable<List<Task>> getTask() {
-        return null;
+        return Observable.defer(() -> restcalls.getTask("blah"));
     }
 }

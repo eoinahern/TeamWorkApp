@@ -19,12 +19,9 @@ public class DataStoreFactory {
 
 
     @Inject
-    public DataStoreFactory( RestAPICalls resapicalls)
+    public DataStoreFactory(RestAPICalls resapicalls)
     {
-
         webstore = new WebDataStore(resapicalls);
-
-
     }
 
     public DataStore getDataStore()
