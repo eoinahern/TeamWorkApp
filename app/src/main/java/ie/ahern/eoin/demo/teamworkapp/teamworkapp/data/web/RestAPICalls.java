@@ -13,10 +13,10 @@ import rx.Observable;
  */
 public interface RestAPICalls {
 
-    @GET("{key}/")
-    Observable<List<Project>> getProjects(@Path("key") String key);
+    @GET(".json")
+    Observable<List<Project>> getProjects();
 
-    @GET("{key}/")
-    Observable<List<Task>> getTask(@Path("user") String key);
+    @GET(".json")
+    Observable<List<Task>> getTask();
 
 }

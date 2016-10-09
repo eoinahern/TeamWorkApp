@@ -26,8 +26,6 @@ public class DataStoreFactory {
 
     public DataStore getDataStore()
     {
-
-        //use web for now
         return webstore;
     }
 

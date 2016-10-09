@@ -28,11 +28,11 @@ public class WebDataStore implements DataStore {
 
     @Override
     public Observable<List<Project>> getProjects() {
-        return Observable.defer(() -> restcalls.getProjects("key")) ;
+        return Observable.defer(() -> restcalls.getProjects()) ;
     }
 
     @Override
     public Observable<List<Task>> getTask() {
-        return Observable.defer(() -> restcalls.getTask("blah"));
+        return Observable.defer(() -> restcalls.getTask());
     }
 }

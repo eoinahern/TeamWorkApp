@@ -10,6 +10,7 @@ import org.mockito.MockitoAnnotations;
 import java.util.List;
 
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.entity.Project;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.entity.Task;
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web.RestAPICalls;
 import rx.Observable;
 
@@ -27,10 +28,6 @@ public class WebDataStoreTest {
     @Mock
     private RestAPICalls mockrestservice;
 
-    @Mock
-    private Observable<List<Project>> obs;
-
-
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
@@ -44,5 +41,16 @@ public class WebDataStoreTest {
         Observable<List<Project>> returnedobs = webdatastore.getProjects();
         Assert.assertNotNull(returnedobs);
     }
+
+    @Test
+    public void testGetTasks()
+    {
+
+        Observable<List<Task>>  obs = webdatastore.getTask();
+        Assert.assertNotNull(obs);
+    }
+
+
+
 
 }
