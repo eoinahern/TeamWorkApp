@@ -28,7 +28,7 @@ public class WebDataStore implements DataStore {
 
     @Override
     public Observable<List<Project>> getProjects() {
-        return Observable.defer( () -> restcalls.getProjects("key")) ;
+        return Observable.defer(() -> restcalls.getProjects("key")) ;
     }
 
     @Override
