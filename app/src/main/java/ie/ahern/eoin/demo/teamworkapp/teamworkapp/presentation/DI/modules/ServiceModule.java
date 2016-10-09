@@ -8,6 +8,9 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web.RestAPICalls;
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by eoin_pc on 06/10/2016.
@@ -23,7 +26,7 @@ public class ServiceModule {
     @Named("key")
     public String apiKey()
     {
-        return  "blink96elbow";
+        return  "blink96elbow/";
     }
 
     @Provides
@@ -40,5 +43,12 @@ public class ServiceModule {
     public RestAPICalls getWebService(@Named("key") String key,@Named("url") String url, Context cont)
     {
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(url + key)
+                .build();
+
+        return  retrofit.create(RestAPICalls.class);
     }
 }
