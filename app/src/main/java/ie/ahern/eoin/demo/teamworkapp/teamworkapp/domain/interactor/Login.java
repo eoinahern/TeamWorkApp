@@ -1,6 +1,8 @@
 package ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.interactor;
 
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.DataRepository;
 import rx.Observable;
+import rx.Scheduler;
 
 /**
  * Created by eoin_pc on 29/09/2016.
@@ -8,8 +10,17 @@ import rx.Observable;
 public class Login extends UseCase {
 
 
+    private DataRepository datarepo;
+
+    public Login(DataRepository repo, Scheduler androidscheduler, Scheduler mainscheduler)
+    {
+        super(androidscheduler, mainscheduler);
+        datarepo = repo;
+    }
+
+
     @Override
-    public Observable BuildUsecaseObservabel() {
-        return null;
+    public Observable BuildUsecaseObservable() {
+       return datarepo.getProjects();
     }
 }
