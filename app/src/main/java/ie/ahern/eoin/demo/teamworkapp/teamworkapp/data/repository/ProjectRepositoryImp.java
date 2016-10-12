@@ -48,7 +48,7 @@ public class ProjectRepositoryImp implements ProjectRepository {
     }
 
     @Override
-    public Observable<List<Project>> RetrieveStarredProjects(String id) {
+    public Observable<List<Project>> RetrieveStarredProjects() {
        return restcalls.retrieveStarredProjects();
     }
 }
