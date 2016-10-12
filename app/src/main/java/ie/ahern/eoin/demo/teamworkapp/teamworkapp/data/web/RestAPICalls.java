@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Project.Project;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Task.Task;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.PUT;
@@ -53,6 +54,26 @@ public interface RestAPICalls {
             "password: x"
     })
     Observable<List<Project>> retrieveStarredProjects();
+
+
+
+    @GET("tasks.json")
+    @Headers({
+            "username: blink96elbow",
+            "password: x"
+    })
+    Observable<List<Task>> getTasks();
+
+
+    @GET("projects/{id}/tasks.json")
+    @Headers({
+            "username: blink96elbow",
+            "password: x"
+    })
+    Observable<List<Task>> getProjectTasks(@Path("project_id") String proId);
+
+
+
 
 
 }
