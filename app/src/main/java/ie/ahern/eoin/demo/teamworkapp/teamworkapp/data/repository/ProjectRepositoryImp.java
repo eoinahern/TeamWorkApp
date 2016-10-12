@@ -25,8 +25,6 @@ public class ProjectRepositoryImp implements ProjectRepository {
         this.restcalls = restcalls;
     }
 
-
-
     @Override
     public Observable<List<Project>> retrieveProjects() {
        return restcalls.retrieveProjects();

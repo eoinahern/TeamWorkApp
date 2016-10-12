@@ -7,6 +7,14 @@ package ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.domain.model.Person;
 public class Person {
 
 
+
+    private String first_name;
+    private String last_name;
+    private String email;
+
+
+
+
    /* "first-name": "Demo 2",
             "last-name": "User",
             "email-address": "d2@demo1company.com",
