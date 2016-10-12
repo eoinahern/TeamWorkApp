@@ -14,10 +14,10 @@ import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web.RestAPICalls;
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Project.Project;
 import rx.Observable;
 
-import static org.hamcrest.CoreMatchers.any;
-import static org.junit.Assert.*;
+import static org.mockito.Matchers.anyBoolean;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 /**
  * Created by eoin_a on 12/10/2016.
@@ -60,15 +60,25 @@ public class ProjectRepositoryImpTest {
     @Test
     public void starProject() throws Exception {
 
+        when(restcalls.starProject(anyString())).thenReturn(anyBoolean());
+        projectrepo.starProject("boo");
+        verify(restcalls).starProject("boo");
+
     }
 
     @Test
     public void unstarProject() throws Exception {
+        when(restcalls.unstarProject(anyString())).thenReturn(anyBoolean());
+        projectrepo.unstarProject("boo");
+        verify(restcalls).unstarProject("boo");
 
     }
 
     @Test
     public void retrieveStarredProjects() throws Exception {
+        when(restcalls.retrieveStarredProjects()).thenReturn(obs);
+        projectrepo.RetrieveStarredProjects();
+        verify(restcalls).retrieveStarredProjects();
 
     }
 
