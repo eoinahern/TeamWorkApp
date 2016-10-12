@@ -11,7 +11,7 @@ import org.mockito.MockitoAnnotations;
 import java.util.List;
 
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web.RestAPICalls;
-import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Project.Project;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.domain.model.Project.Project;
 import rx.Observable;
 
 import static org.mockito.Matchers.anyBoolean;

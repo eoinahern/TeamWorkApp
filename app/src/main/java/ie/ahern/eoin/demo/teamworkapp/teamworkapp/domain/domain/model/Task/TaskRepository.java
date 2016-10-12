@@ -1,4 +1,4 @@
-package ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Task;
+package ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.domain.model.Task;
 
 import java.util.List;
 

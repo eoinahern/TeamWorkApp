@@ -1,10 +1,9 @@
 package ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web;
 
-import java.util.Arrays;
 import java.util.List;
 
-import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Project.Project;
-import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Task.Task;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.domain.model.Project.Project;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.domain.model.Task.Task;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.PUT;

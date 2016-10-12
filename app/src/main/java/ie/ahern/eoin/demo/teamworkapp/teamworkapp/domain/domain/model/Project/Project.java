@@ -1,4 +1,4 @@
-package ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Project;
+package ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.domain.model.Project;
 
 /**
  * Created by eoin_pc on 12/10/2016.

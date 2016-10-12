@@ -8,11 +8,10 @@ import org.mockito.MockitoAnnotations;
 import java.util.List;
 
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web.RestAPICalls;
-import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Task.Task;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.domain.model.Task.Task;
 import rx.Observable;
 
 import static org.junit.Assert.*;
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 

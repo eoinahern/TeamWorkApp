@@ -5,8 +5,8 @@ import java.util.List;
 import javax.inject.Inject;
 
 import ie.ahern.eoin.demo.teamworkapp.teamworkapp.data.web.RestAPICalls;
-import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Task.Task;
-import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.model.Task.TaskRepository;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.domain.model.Task.Task;
+import ie.ahern.eoin.demo.teamworkapp.teamworkapp.domain.domain.model.Task.TaskRepository;
 import rx.Observable;
 
 /**
