@@ -73,8 +73,27 @@ public interface RestAPICalls {
     Observable<List<Task>> getProjectTasks(@Path("project_id") String proId);
 
 
+    @GET("tasks/{task_id}.json")
+    @Headers({
+            "username: blink96elbow",
+            "password: x"
+    })
+    Observable<Task> getATask(@Path("task_id")String taskid);
 
 
+    @PUT("tasks/{task_id}/complete.json")
+    @Headers({
+            "username: blink96elbow",
+            "password: x"
+    })
+    boolean markTaskComplete(@Path("task_id") String ptaskid);
+
+    @PUT("tasks/{task_id}/uncomplete.json")
+    @Headers({
+            "username: blink96elbow",
+            "password: x"
+    })
+    boolean markTaskIncomplete(@Path("task_id") String ptaskid);
 
 }
 

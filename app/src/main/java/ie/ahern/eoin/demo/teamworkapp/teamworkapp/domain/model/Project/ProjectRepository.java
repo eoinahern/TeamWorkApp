@@ -14,6 +14,6 @@ public interface ProjectRepository {
     Observable<Project> retrieveProject(String id);
     boolean starProject(String id);
     boolean unstarProject(String id);
-    Observable<List<Project>>  RetrieveStarredProjects(String id);
+    Observable<List<Project>>  RetrieveStarredProjects();
 
 }

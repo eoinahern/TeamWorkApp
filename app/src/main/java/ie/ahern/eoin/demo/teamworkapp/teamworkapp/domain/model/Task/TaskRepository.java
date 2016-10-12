@@ -12,5 +12,10 @@ public interface TaskRepository {
 
     Observable<List<Task>> getAllTasks();
     Observable<List<Task>> getAllProjTasks(String projid);
+    Observable<Task> getATask(String taskid);
+
+    boolean markTaskComplete(String ptaskid);
+
+    boolean markTaskIncomplete( String ptaskid);
 
 }
