@@ -21,14 +21,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ServiceModule {
 
 
-    @Singleton
-    @Provides
-    @Named("key")
-    public String apiKey()
-    {
-        return  "blink96elbow/";
-    }
-
     @Provides
     @Singleton
     @Named("url")
@@ -46,7 +38,7 @@ public class ServiceModule {
         Retrofit retrofit = new Retrofit.Builder()
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(url + key)
+                .baseUrl(url)
                 .build();
 
         return  retrofit.create(RestAPICalls.class);
